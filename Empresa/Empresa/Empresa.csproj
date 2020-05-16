@@ -74,6 +74,7 @@
     <Compile Include="Clases\prueba.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ControladorDatos\prueba2.cs" />
+    <Compile Include="ControladorDatos\prueba3.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
