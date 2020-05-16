@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Empresa.ControladorDatos
+namespace Empresa.PaginasWeb
 {
     public class prueba3
     {
