@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\prueba.cs" />
+    <Compile Include="Clases\prueba4.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ControladorDatos\prueba2.cs" />
     <Compile Include="PaginasWeb\prueba3.cs" />
