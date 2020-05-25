@@ -68,10 +68,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="PaginasWeb\ActualizarTrabajador.aspx" />
+    <Content Include="PaginasWeb\EliminarTrabajador.aspx" />
+    <Content Include="PaginasWeb\IngresoTrabajador.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\TipoIdentificacion.cs" />
+    <Compile Include="Clases\Trabajador.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="ControladorDatos\AccesoTipoIdentificacion.cs" />
+    <Compile Include="ControladorDatos\AccesoTrabajador.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -81,6 +88,27 @@
     </Compile>
     <Compile Include="PaginaPrincipal.Master.designer.cs">
       <DependentUpon>PaginaPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\ActualizarTrabajador.aspx.cs">
+      <DependentUpon>ActualizarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\ActualizarTrabajador.aspx.designer.cs">
+      <DependentUpon>ActualizarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\EliminarTrabajador.aspx.cs">
+      <DependentUpon>EliminarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\EliminarTrabajador.aspx.designer.cs">
+      <DependentUpon>EliminarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\IngresoTrabajador.aspx.cs">
+      <DependentUpon>IngresoTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\IngresoTrabajador.aspx.designer.cs">
+      <DependentUpon>IngresoTrabajador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -96,10 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Clases\" />
-    <Folder Include="ControladorDatos\" />
     <Folder Include="Models\" />
-    <Folder Include="PaginasWeb\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
