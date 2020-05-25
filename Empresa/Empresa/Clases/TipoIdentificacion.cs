@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Empresa.ControladorDatos
+namespace Empresa.Clases
 {
-    public class prueba2
+    public class TipoIdentificacion
     {
     }
 }

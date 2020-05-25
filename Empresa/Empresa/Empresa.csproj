@@ -68,13 +68,38 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="PaginasWeb\ActualizarTrabajador.aspx" />
+    <Content Include="PaginasWeb\EliminarTrabajador.aspx" />
+    <Content Include="PaginasWeb\IngresoTrabajador.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\prueba.cs" />
+    <Compile Include="Clases\TipoIdentificacion.cs" />
+    <Compile Include="Clases\Trabajador.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="ControladorDatos\prueba2.cs" />
-    <Compile Include="PaginasWeb\prueba3.cs" />
+    <Compile Include="ControladorDatos\AccesoTipoIdentificacion.cs" />
+    <Compile Include="ControladorDatos\AccesoTrabajador.cs" />
+    <Compile Include="PaginasWeb\ActualizarTrabajador.aspx.cs">
+      <DependentUpon>ActualizarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\ActualizarTrabajador.aspx.designer.cs">
+      <DependentUpon>ActualizarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\EliminarTrabajador.aspx.cs">
+      <DependentUpon>EliminarTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\EliminarTrabajador.aspx.designer.cs">
+      <DependentUpon>EliminarTrabajador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\IngresoTrabajador.aspx.cs">
+      <DependentUpon>IngresoTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\IngresoTrabajador.aspx.designer.cs">
+      <DependentUpon>IngresoTrabajador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
