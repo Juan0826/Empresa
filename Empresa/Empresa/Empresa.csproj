@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Diseño\Style\estilo_admin.css" />
     <Content Include="Global.asax" />
     <Content Include="PaginasWeb\ActualizarTrabajador.aspx" />
     <Content Include="PaginasWeb\EliminarTrabajador.aspx" />

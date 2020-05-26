@@ -1,0 +1,13 @@
+﻿body {
+    background-color: #EEECF0;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.btn-ingresar {
+    background-color: #6B32F5;
+}
+
+.btn-cancelar {
+    background-color: #C7C3CE;
+}
