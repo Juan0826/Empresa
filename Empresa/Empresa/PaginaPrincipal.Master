@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaPrincipal.master.cs" Inherits="Empresa.PaginaPrincipal" %>
 
-<!DOCTYPE html5>
+<!DOCTYPE html>
 
 <html>
 <head runat="server">
