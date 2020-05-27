@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Empresa.Models
+namespace Empresa.PaginasWeb
 {
 
 

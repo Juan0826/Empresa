@@ -7,11 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Empresa.Models
-{
-
-
-    public partial class IngresoTrabajador
-    {
+namespace Empresa.PaginasWeb {
+    
+    
+    public partial class IngresoTrabajador {
     }
 }
