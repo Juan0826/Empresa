@@ -19,23 +19,68 @@
     <div class="container">
         <div class="row" >
             <div class="col-lg-5 col-md-5">
+
+                <!--FORMULARIO DE BUSQUEDA-->
                 <label style="position: absolute;background-color: white;width: 50%;padding-left: 4px;">Buscar Identificacion Trabajador </label>
                 <div class="form-group row" style="margin-top: 14px; border: 1px black solid; padding-top: 15px; padding-bottom: 15px;" align="center">
                     <label class="col-sm-6 col-form-label">Ingresar Identificacion </label>
                     <div class="col-sm-6">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx">
+                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="">
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-success">Buscar</button>
+                        <button type="submit" class="btn btn-danger">Cancelar</button>
                     </div>
                 </div>
+
+                <!--FORMULARIO DE ACTUALIZAR-->
                 <label style="position: absolute;background-color: white;width: 32%;padding-left: 4px;">Actualizar Trabajador</label>
                 <div class="form-group row" style="margin-top: 30px; border: 1px black solid; padding-top: 15px; padding-bottom: 15px;" align="center">
-                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Ingresar Identificacion </label>
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Actulizar Nombre</label>
                     <div class="col-sm-6">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx">
+                        <input class="form-control" type="text" name="nombre" value="" maxlength="10" placeholder="">
                     </div>
-                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Ingresar Identificacion </label>
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Actualizar Apellido</label>
                     <div class="col-sm-6">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx">
+                        <input class="form-control" type="text" name="apellido" value="" maxlength="10" placeholder="">
                     </div>
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Actualizar Tipo Identificacion</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" type="text" name="tipo_documento" value="" maxlength="10" placeholder="">
+                        </select>
+                    </div>
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Actualizar Identificacion</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="">
+                    </div>
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Actualizar Salario</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="">
+                    </div>
+
+                    <!--BOTONES DE ACTUALIZAR-->
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">.</label>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-success">Consultar</button>
+                    </div>
+
+                    <!--FORMULARIO DE INGRESO-->
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Salario</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="">
+                    </div>
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Nombre Completo</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="">
+                    </div>
+
+                    <!--BOTONES DE CONSULTA-->
+                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;">.</label>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-warning">Ingresar</button>
+                        <button type="submit" class="btn btn-danger">Cancelar</button>
+                    </div>
+
                 </div>
             </div>
             <div class="col-lg-6 col-md-6" style="margin-left: 20px;">
@@ -49,98 +94,3 @@
             </div>
         </div>
     </div>
-
-        <!-- Pagina principal menu -->
-        <form id="form1" runat="server">
-
-            <!-- INICIO DE LA BUSQUEDA DE TRABAJADOR-->
-            <div class="container" border="1">
-                <div class="row">
-                    <div class="alert alert-info" role="alert">
-                        <h4>BUSCAR TRABAJADOR:</h4> <br />
-                        Ingresar Numero de Documento: <input type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx">
-                        <button type="submit" class="btn btn-success">Buscar</button>
-                        <button type="submit" class="btn btn-danger">Cancelar</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-
-                        <!-- INICIO DE LA BUSQUEDA DE TRABAJADOR-->
-                        <h4>DATOS TRABAJADOR: </h4><br /><br />
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="well well-sm">
-                                        <form class="form-horizontal" method="post">
-                                            <fieldset>
-
-                                                <!-- CAMPOS DEL FORMULARIO-->
-                                                <div class="form-group">
-                                                    <!-- NOMBRE COMPLETO: -->
-                                                    <label for="nombre" class="control-label">NOMBRE COMPLETO: </label>
-                                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese Nombre">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <!-- APELLIDOS: -->
-                                                    <label for="apellidos_id" class="control-label">APELLIDOS: </label>
-                                                    <input type="text" class="form-control" id="apellidos_id" name="street1" placeholder="Ingrese Apellidos">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <!-- SALARIO: -->
-                                                    <label for="salario_id" class="control-label">SALARIO: </label>
-                                                    <input type="text" class="form-control" id="salario_id" name="street2" placeholder="$000.000.000">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <!--  TIPO DOCUMENTO:-->
-                                                    <label for="tipo_documento_id" class="control-label">TIPO DOCUMENTO: </label>
-                                                    <select class="js-select2" name="service">
-                                                        <option>Seleccione</option>
-
-                                                    </select>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <!-- NUMERO DOCUMENTO:-->
-                                                    <label for="num_documento_id" class="control-label">NUMERO DOCUMENTO:</label>
-                                                    <input type="text" class="form-control" id="num_documento_i" name="zip" placeholder="#####">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <!-- Submit Button -->
-                                                    <button type="submit" class="btn btn-primary">MODIFICAR</button>
-                                                </div>
-                                            </fieldset>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <!-- LISTADO DE TRABAJADORES-->
-
-                        <h4>LISTA DE TRABAJADOR: </h4><br /><br />
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombres</th>
-                                    <th scope="col">Apellidos</th>
-                                    <th scope="col">Salario</th>
-                                    <th scope="col">Tipo Documento</th>
-                                    <th scope="col">Numero Documento</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </form>
-</body>
-</html>
