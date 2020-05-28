@@ -22,6 +22,15 @@ namespace Empresa.PaginasWeb {
         protected global::System.Web.UI.WebControls.Label Encabezado1;
         
         /// <summary>
+        /// Control label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label1;
+        
+        /// <summary>
         /// Control identificadorbuscar.
         /// </summary>
         /// <remarks>
@@ -31,22 +40,22 @@ namespace Empresa.PaginasWeb {
         protected global::System.Web.UI.WebControls.TextBox identificadorbuscar;
         
         /// <summary>
-        /// Control Btn_Consultar.
+        /// Control Btn_ConsultarEli.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_Consultar;
+        protected global::System.Web.UI.WebControls.Button Btn_ConsultarEli;
         
         /// <summary>
-        /// Control Btn_CancelarBusq.
+        /// Control Btn_CancelarEli.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_CancelarBusq;
+        protected global::System.Web.UI.WebControls.Button Btn_CancelarEli;
         
         /// <summary>
         /// Control Encabezado2.
