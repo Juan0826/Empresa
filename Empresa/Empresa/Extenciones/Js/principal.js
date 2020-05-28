@@ -1,11 +1,6 @@
 ﻿// JavaScript Document
-$(document).ready(function (e) {
+function Probar() {
+    var f = $(".identificadorbuscar").val();
 
-    $("body").on("click", "#Btn_ConsultarEli", function (e) {
-        e.preventDefault();
-
-        alert("Hola como vas");
-
-    });
-
-});
+    alert("Variable f " + f);
+}

@@ -8,13 +8,6 @@
     <title>Empresa</title>
     <link rel="stylesheet" type="text/css" href="Extenciones/Style/estilo_admin.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" type="text/javascript"></script>
-    <script src="Extenciones/Js/principal.js" type="text/javascript" ></script>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-    
 </head>
 <body>
     <!-- Pagina principal menu -->
@@ -37,6 +30,14 @@
         </nav>
     </div>
     <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" />
+                <asp:ScriptReference Path="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" />
+                <asp:ScriptReference Path="Extenciones/Js/jquery.js" />
+                <asp:ScriptReference Path="Extenciones/Js/principal.js" />
+            </Scripts>
+        </asp:ScriptManager>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                
             </asp:ContentPlaceHolder>

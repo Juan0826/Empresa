@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Extenciones\Js\jquery.js" />
     <Content Include="Extenciones\Js\principal.js" />
     <Content Include="Extenciones\Style\estilo_admin.css" />
     <Content Include="Global.asax" />

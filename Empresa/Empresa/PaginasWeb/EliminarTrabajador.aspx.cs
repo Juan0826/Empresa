@@ -13,5 +13,10 @@ namespace Empresa.PaginasWeb
         {
 
         }
+
+        //protected void Btn_ConsultarEli_Click(object sender, EventArgs e)
+        //{
+        //    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Button clicked.');", true);
+        //}
     }
 }

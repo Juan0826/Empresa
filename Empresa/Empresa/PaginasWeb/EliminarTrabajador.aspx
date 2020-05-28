@@ -1,6 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="EliminarTrabajador.aspx.cs" Inherits="Empresa.PaginasWeb.EliminarTrabajador" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <br />
 <div class="container">
@@ -17,7 +15,7 @@
                 <br />
                 <br />
                 <div class="col-sm-6" align="right">
-                <asp:Button ID="Btn_Consultar" CssClass="btn btn-success" Text="Buscar" runat="server"/>
+                <Button ID="Btn_ConsultarEli" class="btn btn-success" onclick="Probar()">Buscar</Button>
                 </div>
                 <div class="col-sm-6" align="left">
                 <asp:Button ID="Btn_CancelarBusq" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
