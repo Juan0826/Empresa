@@ -1,13 +1,25 @@
 ﻿body {
-    background-color: #EEECF0;
-    font-family: Arial;
-    font-size: 12px;
+    background-color: #EEECF0 !important;
+    font-family: Arial !important;
+    font-size: 12px !important;
 }
 
 .btn-ingresar {
-    background-color: #6B32F5;
+    background-color: #6B32F5 !important;
 }
 
 .btn-cancelar {
-    background-color: #C7C3CE;
+    background-color: #C7C3CE !important;
+}
+
+.encabezado {
+    position: absolute;
+    background-color: #EEECF0;
+    padding-left: 4px;
+}
+
+.borde_encabezado {
+    border: 1px black solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

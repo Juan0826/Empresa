@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Empresa.Models
+namespace Empresa.PaginasWeb
 {
     public partial class ActualizarTrabajador : System.Web.UI.Page
     {
