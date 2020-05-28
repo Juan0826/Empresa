@@ -39,11 +39,11 @@
                     
                     <asp:Label ID="label6" runat="server" class="col-sm-4 col-form-label">Total Salario </asp:Label>
                     <div class="col-sm-8">
-                        <asp:TextBox ID="total_salario" runat="server" class="form-control" type="text" name="total_salario" style="margin-top: 10px;" value="" maxlength="10" placeholder="Salario"></asp:TextBox>
+                        <asp:TextBox ID="total_salario" runat="server" class="form-control" disabled="disabled" type="text" name="total_salario" style="margin-top: 10px;" value="" maxlength="10" placeholder="Salario"></asp:TextBox>
                     </div>
                     <asp:Label ID="label7" runat="server" class="col-sm-4 col-form-label">Nombre Completo</asp:Label>
                     <div class="col-sm-8">
-                        <asp:TextBox ID="nombre_completo" runat="server" class="form-control" type="text" name="nombre_completo" style="margin-top: 18px;" value="" maxlength="10" placeholder="Nombre completo"></asp:TextBox>
+                        <asp:TextBox ID="nombre_completo" runat="server" class="form-control" disabled="disabled" type="text" name="nombre_completo" style="margin-top: 18px;" value="" maxlength="10" placeholder="Nombre completo"></asp:TextBox>
                     </div>
 
                     <div class="col-sm-6" style="margin-top: 10px;">
