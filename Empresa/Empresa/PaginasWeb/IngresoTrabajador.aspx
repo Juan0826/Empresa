@@ -2,34 +2,35 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
     <div class="container">
         <div class="row" >
             <div class="col-lg-5 col-md-5">
                 <!--Primer panel ingresar trabajador-->
-                <label style="position: absolute;background-color: white;width: 50%;padding-left: 4px;">Insertar Ingreso Trabajador </label>
-                <div class="form-group row" style="margin-top: 14px; border: 1px black solid; padding-top: 15px; padding-bottom: 15px;" align="center">
-                    <label class="col-sm-4 col-form-label" style="margin-top: 8px;" align="left">Nombre </label>
+                <asp:Label ID="Encabezado1" runat="server" CssClass="encabezado" style="width: 32%;">Insertar Ingreso Trabajador </asp:Label>
+                <div class="form-group row borde_encabezado" style="margin-top: 10px;" align="center">
+                    <asp:Label ID="label1" runat="server" class="col-sm-4 col-form-label">Nombre </asp:Label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="Ingrese Nombre">
+                        <asp:TextBox ID="nombre" runat="server" class="form-control" type="text" name="nombre" value="" maxlength="10" placeholder="Ingrese Nombre"></asp:TextBox>
                     </div>
-                    <label class="col-sm-4 col-form-label" style="margin-top: 8px;" align="left">Apellido </label>
+                    <asp:Label ID="label2" runat="server" class="col-sm-4 col-form-label">Apellido </asp:Label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="Ingrese Apellido">
+                        <asp:TextBox ID="apellido" runat="server" class="form-control" type="text" name="apellido" value="" maxlength="10" placeholder="Ingrese Apellido"></asp:TextBox>
                     </div>
-                    <label class="col-sm-6 col-form-label" style="margin-top: 8px;" align="left">Tipo de indentificación </label>
-                    <div class="col-sm-6">
+                    <asp:Label ID="label3" runat="server" class="col-sm-4 col-form-label">Tipo de indentificación </asp:Label>
+                    <div class="col-sm-8">
                         <select class="form-control">
                           <option value="value1" selected>Seleccione</option> 
                           <option value="value2">Value 2</option>
                         </select>
                     </div>
-                    <label class="col-sm-4 col-form-label" style="margin-top: 8px;" align="left">Identificación </label>
+                    <asp:Label ID="label4" runat="server" class="col-sm-4 col-form-label">Identificación </asp:Label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="Identificación">
+                        <asp:TextBox ID="identificacion" runat="server" class="form-control" type="text" name="identificacion" value="" maxlength="10" placeholder="Identificación"></asp:TextBox>
                     </div>
-                    <label class="col-sm-4 col-form-label" style="margin-top: 8px;" align="left">Salario </label>
+                    <asp:Label ID="label5" runat="server" class="col-sm-4 col-form-label">Salario </asp:Label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="Ingrese Salario">
+                        <asp:TextBox ID="salario" runat="server" class="form-control" type="text" name="salario" value="" maxlength="10" placeholder="Ingrese Salario"></asp:TextBox>
                     </div>
 
                     <div class="col-sm-12">
@@ -37,13 +38,13 @@
                     </div>
                     
                     
-                    <label class="col-sm-4 col-form-label" style="margin-top: 10px;" align="left">Total Salario </label>
+                    <asp:Label ID="label6" runat="server" class="col-sm-4 col-form-label">Total Salario </asp:Label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" name="buscar" style="margin-top: 10px;" value="" maxlength="10" placeholder="Salario">
+                        <asp:TextBox ID="total_salario" runat="server" class="form-control" type="text" name="total_salario" style="margin-top: 10px;" value="" maxlength="10" placeholder="Salario"></asp:TextBox>
                     </div>
-                    <label class="col-sm-4 col-form-label" style="margin-top: 8px;" align="left">Nombre Completo</label>
+                    <asp:Label ID="label7" runat="server" class="col-sm-4 col-form-label">Nombre Completo</asp:Label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" name="buscar" style="margin-top: 18px;" value="" maxlength="10" placeholder="Nombre completo">
+                        <asp:TextBox ID="nombre_completo" runat="server" class="form-control" type="text" name="nombre_completo" style="margin-top: 18px;" value="" maxlength="10" placeholder="Nombre completo"></asp:TextBox>
                     </div>
 
                     <div class="col-sm-6">
@@ -53,24 +54,18 @@
                         <button class="btn btn-primary" >Cancelar</button>
                     </div>
 
-                </div>
-
-
-
-
-
-
-
-
-
-                
+                </div>                
             </div>
             <div class="col-lg-6 col-md-6" style="margin-left: 20px;">
-                <label style="position: absolute;background-color: white;width: 40%;padding-left: 4px;">Consultar Trabajador</label>
+                <asp:Label ID="Encabezado2" runat="server" CssClass="encabezado" style="width: 21%;">Consultar Trabajador</asp:Label>
                 <div class="form-group row" style="margin-top: 14px; border: 1px black solid; padding-top: 15px; padding-bottom: 15px;" align="center">
-                    <label class="col-sm-4 col-form-label">Ingresar Identificacion </label>
+                    <asp:Label ID="label8" runat="server" class="col-sm-4 col-form-label">Aca va la tabla de consulta</asp:Label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx">
+                        
+                        <!--Aca va la consulta de la tabla-->
+
+
+
                     </div>
                 </div>
             </div>
