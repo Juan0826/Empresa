@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Empresa.PaginasWeb {
-    
-    
-    public partial class EliminarTrabajador {
-        
+namespace Empresa.PaginasWeb
+{
+
+
+    public partial class EliminarTrabajador
+    {
+
         /// <summary>
         /// Control Encabezado1.
         /// </summary>
@@ -20,16 +22,7 @@ namespace Empresa.PaginasWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Encabezado1;
-        
-        /// <summary>
-        /// Control label1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label1;
-        
+
         /// <summary>
         /// Control identificadorbuscar.
         /// </summary>
@@ -38,25 +31,25 @@ namespace Empresa.PaginasWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox identificadorbuscar;
-        
+
         /// <summary>
-        /// Control Btn_ConsultarEli.
+        /// Control Btn_Consultar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_ConsultarEli;
-        
+        protected global::System.Web.UI.WebControls.Button Btn_Consultar;
+
         /// <summary>
-        /// Control Btn_CancelarEli.
+        /// Control Btn_CancelarBusq.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_CancelarEli;
-        
+        protected global::System.Web.UI.WebControls.Button Btn_CancelarBusq;
+
         /// <summary>
         /// Control Encabezado2.
         /// </summary>
@@ -65,5 +58,14 @@ namespace Empresa.PaginasWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Encabezado2;
+
+        /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }
