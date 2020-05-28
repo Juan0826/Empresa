@@ -73,6 +73,7 @@
     <Content Include="PaginasWeb\ActualizarTrabajador.aspx" />
     <Content Include="PaginasWeb\EliminarTrabajador.aspx" />
     <Content Include="PaginasWeb\IngresoTrabajador.aspx" />
+    <Content Include="PaginasWeb\modificar.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

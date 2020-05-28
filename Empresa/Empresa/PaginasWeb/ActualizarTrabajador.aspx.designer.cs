@@ -7,9 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Empresa.PaginasWeb {
-    
-    
-    public partial class ActualizarTrabajador {
+namespace Empresa.PaginasWeb
+{
+
+
+    public partial class ActualizarTrabajador
+    {
     }
 }
