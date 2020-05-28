@@ -32,8 +32,7 @@
                     <div class="col-sm-8">
                         <asp:TextBox ID="salario" runat="server" class="form-control" type="text" name="salario" value="" maxlength="10" placeholder="Ingrese Salario"></asp:TextBox>
                     </div>
-
-                    <div class="col-sm-12">
+                    <div class="col-sm-12" style="margin-top: 10px;">
                         <button class="btn btn-primary" >Consultar</button> 
                     </div>
                     
@@ -47,25 +46,60 @@
                         <asp:TextBox ID="nombre_completo" runat="server" class="form-control" type="text" name="nombre_completo" style="margin-top: 18px;" value="" maxlength="10" placeholder="Nombre completo"></asp:TextBox>
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="margin-top: 10px;">
                         <button class="btn btn-primary" >Ingresar</button>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="margin-top: 10px;">
                         <button class="btn btn-primary" >Cancelar</button>
                     </div>
 
                 </div>                
             </div>
+
+            <!--Segundo panel ingresar trabajador-->
+            <!--Tabla de consulta-->
             <div class="col-lg-6 col-md-6" style="margin-left: 20px;">
                 <asp:Label ID="Encabezado2" runat="server" CssClass="encabezado" style="width: 21%;">Consultar Trabajador</asp:Label>
-                <div class="form-group row" style="margin-top: 14px; border: 1px black solid; padding-top: 15px; padding-bottom: 15px;" align="center">
-                    <asp:Label ID="label8" runat="server" class="col-sm-4 col-form-label">Aca va la tabla de consulta</asp:Label>
+                <div class="form-group row borde_encabezado" style="margin-top: 10px;" align="center">
                     <div class="col-sm-8">
-                        
-                        <!--Aca va la consulta de la tabla-->
-
-
-
+                        <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col">APELLIDO</th>
+                                <th scope="col">INDENTIFICACIÓN</th>
+                                <th scope="col">TIPO INDENTIFICACIÓN</th>
+                                <th scope="col">SALARIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
