@@ -7,17 +7,14 @@
             <!--Primer panel eliminar trabajador-->
             <asp:Label ID="Encabezado1" runat="server" CssClass="encabezado" style="width: 38%;">Buscar Identificacion Trabajador </asp:Label>
             <div class="form-group row borde_encabezado" style="margin-top: 10px;" align="center">
-                <label class="col-sm-6 col-form-label">Ingresar Identificacion </label>
+                <asp:Label ID="label_Eli1" runat="server" class="col-sm-6 col-form-label">Ingresar Identificacion </asp:Label>
                 <div class="col-sm-6">
-                <asp:TextBox ID="identificadorbuscar" runat="server" CssClass="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx"></asp:TextBox>
+                <asp:TextBox ID="identificadorbuscar" runat="server" CssClass="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="Identificación"></asp:TextBox>
                 </div>
-                <br />
-                <br />
-                <br />
-                <div class="col-sm-6" align="right">
+                <div class="col-sm-6" align="right" style="margin-top: 10px;">
                 <Button ID="Btn_ConsultarEli" class="btn btn-success" onclick="Probar()">Buscar</Button>
                 </div>
-                <div class="col-sm-6" align="left">
+                <div class="col-sm-6" align="left" style="margin-top: 10px;">
                 <asp:Button ID="Btn_CancelarBusq" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
                 </div>
             </div>
@@ -25,13 +22,19 @@
             <!--Segundo panel eliminar trabajador-->
             <asp:Label ID="Encabezado2" runat="server" CssClass="encabezado" style="width: 22%;">Datos Trabajador</asp:Label>
             <div class="form-group row borde_encabezado" style="margin-top: 26px;" align="center">
-                <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Ingresar Identificacion </label>
+                <asp:Label ID="label_Eli2" runat="server" class="col-sm-6 col-form-label" style="margin-top: 8px;">Nombre completo</asp:Label>
                 <div class="col-sm-6">
-                <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx">
+                <asp:TextBox ID="nombre_Completo" runat="server" disabled="disabled" class="form-control" type="text" name="nombre_Completo" value="" maxlength="10" placeholder="Nombre"></asp:TextBox>
                 </div>
-                <label class="col-sm-6 col-form-label" style="margin-top: 8px;">Ingresar Identificacion </label>
+                <asp:Label ID="label_Eli3" runat="server" class="col-sm-6 col-form-label" style="margin-top: 8px;">Indentificación</asp:Label>
                 <div class="col-sm-6">
-                <input class="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="xxx-xxx-xxxx">
+                <asp:TextBox ID="identificacion" runat="server" disabled="disabled" class="form-control" type="text" name="identificacion" value="" maxlength="10" placeholder="Indentificación"></asp:TextBox>
+                </div>
+                <div class="col-sm-6" style="margin-top: 100px;" align="right">
+                <Button ID="btn_ConsultarEli" class="btn btn-success" onclick="Probar()">Eliminar</Button>
+                </div>
+                <div class="col-sm-6" style="margin-top: 100px;" align="left">
+                <asp:Button ID="btn_CancelarEli" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
                 </div>
             </div>
         </div>
@@ -83,6 +86,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 </asp:Content>
