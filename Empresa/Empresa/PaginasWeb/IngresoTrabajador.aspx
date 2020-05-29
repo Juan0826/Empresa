@@ -11,33 +11,28 @@
                     <div class="col-sm-8">
                         <asp:TextBox ID="nombre" runat="server" class="form-control nombre" type="text" name="nombre" value="" maxlength="10" placeholder="Ingrese Nombre"></asp:TextBox>
                     </div>
-                    <asp:Label ID="label2" runat="server" class="col-sm-4 col-form-label ">Apellido </asp:Label>
+                    <asp:Label ID="label2" runat="server" class="col-sm-4 col-form-label">Apellido </asp:Label>
                     <div class="col-sm-8">
                         <asp:TextBox ID="apellido" runat="server" class="form-control" type="text" name="apellido" value="" maxlength="10" placeholder="Ingrese Apellido"></asp:TextBox>
                     </div>
                     <asp:Label ID="label3" runat="server" class="col-sm-4 col-form-label tipoIdentificador">Tipo de indentificación </asp:Label>
                     <div class="col-sm-8">
-                        <select class="form-control">
-                          <option value="value1" selected>Seleccione</option> 
-                          <option value="value2">Value 2</option>
-                        </select>
+                        <asp:DropDownList ID="tipoidentificacion" runat="server" CssClass="form-control"></asp:DropDownList>
                     </div>
                     <asp:Label ID="label4" runat="server" class="col-sm-4 col-form-label">Identificación </asp:Label>
                     <div class="col-sm-8">
-                        <asp:TextBox ID="identificacion" runat="server" class="form-control" type="text" name="identificacion" value="" maxlength="10" placeholder="Identificación"></asp:TextBox>
+                        <asp:TextBox ID="identificacion" runat="server" class="form-control" type="number" name="identificacion" value="" maxlength="10" placeholder="Identificación"></asp:TextBox>
                     </div>
                     <asp:Label ID="label5" runat="server" class="col-sm-4 col-form-label">Salario </asp:Label>
                     <div class="col-sm-8">
-                        <asp:TextBox ID="salario" runat="server" class="form-control" type="text" name="salario" value="" maxlength="10" placeholder="Ingrese Salario"></asp:TextBox>
+                        <asp:TextBox ID="salario" runat="server" class="form-control" type="number" name="salario" value="" maxlength="10" placeholder="Ingrese Salario"></asp:TextBox>
                     </div>
                     <div class="col-sm-12" style="margin-top: 10px;">
                         <button class="btn btn-primary" id="btnSueldo" >Consultar</button> 
                     </div>
-                    
-                    
                     <asp:Label ID="label6" runat="server" class="col-sm-4 col-form-label">Total Salario </asp:Label>
                     <div class="col-sm-8">
-                        <asp:TextBox ID="total_salario" runat="server" class="form-control" disabled="disabled" type="text" name="total_salario" style="margin-top: 10px;" maxlength="10" readonly="true" placeholder="Salario"></asp:TextBox>
+                        <asp:TextBox ID="total_salario" runat="server" class="form-control" disabled="disabled" type="number" style="margin-top: 10px;" maxlength="10" placeholder="Salario"></asp:TextBox>
                     </div>
                     <asp:Label ID="label7" runat="server" class="col-sm-4 col-form-label">Nombre Completo</asp:Label>
                     <div class="col-sm-8">
@@ -45,7 +40,7 @@
                     </div>
 
                     <div class="col-sm-6" style="margin-top: 10px;">
-                        <button id="ingresar" class="btn btn-primary" >Ingresar</button>
+                        <asp:Button ID="Btn_Ingresar" runat="server" CssClass="btn btn-ingresar" Text="Ingresar" OnClick="Btn_Ingresar_Click"/>
                     </div>
                     <div class="col-sm-6" style="margin-top: 10px;">
                         <button class="btn btn-primary" >Cancelar</button>
@@ -103,42 +98,38 @@
             </div>
         </div>
     </div>
-     <script type="text/javascript" >
-         // funcion de calcular sueldo
-         $('#btnSueldo').click(function () {
-          
-             const salario = document.getElementById('<%=salario.ClientID%>').value;
-             const nombre = document.getElementById('<%=nombre.ClientID%>').value;
-             const apellido = document.getElementById('<%=apellido.ClientID%>').value;
-             const identificacion = document.getElementById('<%=identificacion.ClientID%>').value;
+    <script type="text/javascript" >
+        // funcion de calcular sueldo
+        $('#btnSueldo').click(function () {
+            var TSalario;
+            const salario = parseInt(document.getElementById('<%=salario.ClientID%>').value);
+            <%--const nombre = document.getElementById('<%=nombre.ClientID%>').value;
+            const apellido = document.getElementById('<%=apellido.ClientID%>').value;
+            const identificacion = document.getElementById('<%=identificacion.ClientID%>').value;--%>
 
-             // aqui verificamos que el salario sea un numero
-             if (isNaN(salario) || salario ==="") {
-                 alert('el salario ingresado no es un numero');
-             } else {
-               // aqui ponemos el codigo de salario calculado
-                 alert('salario calculado pero no se pro cuanto sumarlo');
-             }
-            
-             
-         });
+            // aqui verificamos que el salario sea un numero
+            if (isNaN(salario) || salario ==="") {
+                alert('El salario ingresado no es un numero');
+            } else {
+                //Aqui ponemos el codigo de salario calculado
+                //alert('Salario ' + salario);
+                if (salario < 870803) {
+                    TSalario = salario + 102854;
+                } else {
+                    TSalario = salario;
+                }
+                //alert('Salario ' + TSalario);
+                $('#<%=total_salario.ClientID%>').val(TSalario);
+                return false;
+            }
+        });
 
+        $('#<%=apellido.ClientID%>').on('change keyup paste mouseup', function () {
+            const nombre = document.getElementById('<%=nombre.ClientID%>').value;
+            const apellido = document.getElementById('<%=apellido.ClientID%>').value;
 
-         // en ingresar vamos a validar que los campos no esten vacios
-         $('#ingresar').click(function ()
-         {
-             const nombre = document.getElementById('<%=nombre.ClientID%>').value;
-             const apellido = document.getElementById('<%=apellido.ClientID%>').value;
-             const identificacion = document.getElementById('<%=identificacion.ClientID%>').value;
-
-             if (nombre === "" || apellido === "" || isNaN(identificacion)) {
-                 alert('hubo un error todos los campos son requeridos');
-             } else {
-                 alert('todo esta correcto');
-             }
-         });
-
-
-         // 
+            $('#<%=nombre_completo.ClientID%>').val(nombre + " " + apellido);
+            return false;
+        });
      </script>
 </asp:Content>

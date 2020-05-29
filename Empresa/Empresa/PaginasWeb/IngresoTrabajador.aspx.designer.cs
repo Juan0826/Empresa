@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Empresa.PaginasWeb
-{
-
-
-    public partial class IngresoTrabajador
-    {
-
+namespace Empresa.PaginasWeb {
+    
+    
+    public partial class IngresoTrabajador {
+        
         /// <summary>
         /// Control Encabezado1.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Encabezado1;
-
+        
         /// <summary>
         /// Control label1.
         /// </summary>
@@ -31,7 +29,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label1;
-
+        
         /// <summary>
         /// Control nombre.
         /// </summary>
@@ -40,7 +38,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nombre;
-
+        
         /// <summary>
         /// Control label2.
         /// </summary>
@@ -49,7 +47,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label2;
-
+        
         /// <summary>
         /// Control apellido.
         /// </summary>
@@ -58,7 +56,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox apellido;
-
+        
         /// <summary>
         /// Control label3.
         /// </summary>
@@ -67,7 +65,16 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label3;
-
+        
+        /// <summary>
+        /// Control tipoidentificacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList tipoidentificacion;
+        
         /// <summary>
         /// Control label4.
         /// </summary>
@@ -76,7 +83,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label4;
-
+        
         /// <summary>
         /// Control identificacion.
         /// </summary>
@@ -85,7 +92,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox identificacion;
-
+        
         /// <summary>
         /// Control label5.
         /// </summary>
@@ -94,7 +101,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label5;
-
+        
         /// <summary>
         /// Control salario.
         /// </summary>
@@ -103,7 +110,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox salario;
-
+        
         /// <summary>
         /// Control label6.
         /// </summary>
@@ -112,7 +119,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label6;
-
+        
         /// <summary>
         /// Control total_salario.
         /// </summary>
@@ -121,7 +128,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox total_salario;
-
+        
         /// <summary>
         /// Control label7.
         /// </summary>
@@ -130,7 +137,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label7;
-
+        
         /// <summary>
         /// Control nombre_completo.
         /// </summary>
@@ -139,7 +146,16 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nombre_completo;
-
+        
+        /// <summary>
+        /// Control Btn_Ingresar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Ingresar;
+        
         /// <summary>
         /// Control Encabezado2.
         /// </summary>

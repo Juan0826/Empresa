@@ -12,9 +12,9 @@ namespace Empresa.Clases
         public string Apellidos { get; set; }
         public int Identificacion { get; set; }
         public int Identificador_Id { get; set; }
-        public decimal Salario { get; set; }
+        public double Salario { get; set; }
 
-        public Trabajador(int codigoTrabajador, string nombres, string apellidos, int identificacion, int codigoIdentificacion, decimal salario)
+        public Trabajador(int codigoTrabajador, string nombres, string apellidos, int identificacion, int codigoIdentificacion, double salario)
         {
             this.Trabajador_Id = codigoTrabajador;
             this.Nombres = nombres;
