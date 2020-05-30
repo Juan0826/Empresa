@@ -14,20 +14,29 @@ namespace Empresa.PaginasWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            llenarListas();
+            LlenarListas();
+            LlenarTabla();
         }
 
-        protected void llenarListas()
+        protected void LlenarListas()
         {
-            List<TipoIdentificacion> listaTipos = AccesoTipoIdentificacion.ListarTiposIdentificacion();
+            List<TipoIdentificacion> ListaTipos = AccesoTipoIdentificacion.ListarTiposIdentificacion();
 
             this.tipoidentificacion.Items.Clear();
-            this.tipoidentificacion.DataSource = listaTipos;
+            this.tipoidentificacion.DataSource = ListaTipos;
             this.tipoidentificacion.DataTextField = "Nombre";
             this.tipoidentificacion.DataValueField = "Identificacion_Id";
             this.tipoidentificacion.DataBind();
             this.tipoidentificacion.Visible = true;
             this.tipoidentificacion.Focus();
+        }
+
+        protected void LlenarTabla()
+        {
+            List<Trabajador> ListaTrabajador = AccesoTrabajador.ListarTrabajadores();
+
+            this.gdvListaTrabajdores.DataSource = ListaTrabajador;
+            this.gdvListaTrabajdores.DataBind();
         }
 
         protected void Btn_Ingresar_Click(object sender, EventArgs e)
@@ -40,6 +49,7 @@ namespace Empresa.PaginasWeb
 
             var salario = Convert.ToInt32(this.salario.Text);
             int TSalario;
+
             if (salario < 870803)
             {
                 TSalario = salario + 102854;
@@ -48,18 +58,19 @@ namespace Empresa.PaginasWeb
             {
                 TSalario = salario;
             }
-            trabajador.Salario = Convert.ToDouble(TSalario);
+            trabajador.Salario = Convert.ToDecimal(TSalario);
 
             bool Estado = AccesoTrabajador.InsertarTrabajador(trabajador);
 
             if (Estado)
             {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(),"alertMessage", @"alert('Trabajador registrado correctamente');", true);
+                //ScriptManager.RegisterClientScriptBlock(this, GetType(),"alertMessage", @"alert('Trabajador registrado correctamente');", true);
+                //ScriptManager.RegisterClientScriptBlock(this, GetType(),"alertMessage", @"alert('Trabajador registrado correctamente');", true);
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "alertMessage", @"alert('Error al registrar trabajador')", true);
-            }            
+                //ScriptManager.RegisterClientScriptBlock(this, GetType(), "alertMessage", @"alert('Error al registrar trabajador')", true);
+            }
         }
     }
 }

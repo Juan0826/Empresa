@@ -51,6 +51,28 @@ namespace Empresa.ControladorDatos
             return Estado;
         }
 
+        public static List<Trabajador> ListarTrabajadores()
+        {
+            List<Trabajador> ListaTrabajador = new List<Trabajador>();
+
+            using (SqlConnection ObjConexion = new SqlConnection(Conexion.Cadena_Conexion))
+            {
+                ObjConexion.Open();
+                SqlCommand ObjComando = new SqlCommand();
+                ObjComando.Connection = ObjConexion;
+                ObjComando.CommandType = CommandType.Text;
+                ObjComando.CommandText = @"SELECT [Trabajador_Id],[Nombres],[Apellidos],[Identificacion],[Tipo_Identificador_Id],[Salario] FROM [dbo].[trabajador]";
+
+                var r = ObjComando.ExecuteReader();
+
+                while (r.Read())
+                {
+                    ListaTrabajador.Add(new Trabajador(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetInt32(3), r.GetInt32(4), r.GetDecimal(5)));
+                }
+            }
+            return ListaTrabajador;
+        }
+
 
     }
 }

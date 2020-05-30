@@ -55,44 +55,10 @@
                 <asp:Label ID="Encabezado2" runat="server" CssClass="encabezado" style="width: 21%;">Consultar Trabajador</asp:Label>
                 <div class="form-group row borde_encabezado" style="margin-top: 10px;" align="center">
                     <div class="col-sm-8">
-                        <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">NOMBRE</th>
-                                <th scope="col">APELLIDO</th>
-                                <th scope="col">INDENTIFICACIÓN</th>
-                                <th scope="col">TIPO INDENTIFICACIÓN</th>
-                                <th scope="col">SALARIO</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        </table>
+                        <div class="table-wrapper-scroll-y">
+                            <asp:GridView ID="gdvListaTrabajdores" runat="server">
+                            </asp:GridView>
+                        </div>
                     </div>
                 </div>
             </div>
