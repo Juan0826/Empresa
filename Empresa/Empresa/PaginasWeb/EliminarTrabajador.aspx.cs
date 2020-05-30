@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Empresa.Clases;
+using Empresa.ControladorDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,14 +11,40 @@ namespace Empresa.PaginasWeb
 {
     public partial class EliminarTrabajador : System.Web.UI.Page
     {
+        int codigoTrabajador;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            LlenarTabla();
+        }
+        
+        //evento para buscar
+        protected void Btn_BuscarEli_Click(object sender, EventArgs e)
+        {
+            int identificacion = Convert.ToInt32(this.identificadorbuscar.Text);
+            
+            List<Trabajador> listaBuscarTrabajador = AccesoTrabajador.ListarBuscarTrabajador(identificacion);
 
+            foreach (Trabajador trabajador in listaBuscarTrabajador) {
+                this.oculto.Text= Convert.ToString(trabajador.Trabajador_Id);
+                this.nombre_Completo.Text = trabajador.Nombres +" "+ trabajador.Apellidos;
+                this.identificacion.Text = Convert.ToString(trabajador.Identificacion);
+            }
+
+            
         }
 
-        //protected void Btn_ConsultarEli_Click(object sender, EventArgs e)
-        //{
-        //    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Button clicked.');", true);
-        //}
+        protected void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            bool respuesta = AccesoTrabajador.EliminarTrabajador(Convert.ToInt32(oculto.Text));
+        }
+
+        protected void LlenarTabla()
+        {
+            List<Trabajador> ListaTrabajador = AccesoTrabajador.ListarTrabajadores();
+
+            this.gdvListaTrabajdoresEliminar.DataSource = ListaTrabajador;
+            this.gdvListaTrabajdoresEliminar.DataBind();
+        }
     }
 }

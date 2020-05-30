@@ -12,7 +12,7 @@
                 <asp:TextBox ID="identificadorbuscar" runat="server" CssClass="form-control" type="text" name="buscar" value="" maxlength="10" placeholder="Identificación"></asp:TextBox>
                 </div>
                 <div class="col-sm-6" align="right" style="margin-top: 10px;">
-                <Button ID="Btn_ConsultarEli" class="btn btn-success" onclick="Probar()">Buscar</Button>
+                <asp:Button ID="Btn_BuscarEli" runat="server" CssClass="btn btn-success" Onclick="Btn_BuscarEli_Click" Text="Buscar"/>
                 </div>
                 <div class="col-sm-6" align="left" style="margin-top: 10px;">
                 <asp:Button ID="Btn_CancelarBusq" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
@@ -28,64 +28,32 @@
                 </div>
                 <asp:Label ID="label_Eli3" runat="server" class="col-sm-6 col-form-label" style="margin-top: 8px;">Indentificación</asp:Label>
                 <div class="col-sm-6">
-                <asp:TextBox ID="identificacion" runat="server" disabled="disabled" class="form-control" type="text" name="identificacion" value="" maxlength="10" placeholder="Indentificación"></asp:TextBox>
+                <asp:TextBox ID="identificacion" runat="server" disabled="disabled" class="form-control" type="number" name="identificacion" value="" maxlength="10" placeholder="Indentificación"></asp:TextBox>
                 </div>
                 <div class="col-sm-6" style="margin-top: 100px;" align="right">
-                <Button ID="btn_ConsultarEli" class="btn btn-success" onclick="Probar()">Eliminar</Button>
+                <asp:Button ID="btn_Eliminar" runat="server" CssClass="btn btn-success" OnClick="btn_Eliminar_Click" Text="Eliminar"/>
                 </div>
                 <div class="col-sm-6" style="margin-top: 100px;" align="left">
                 <asp:Button ID="btn_CancelarEli" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
                 </div>
+
+                <asp:TextBox ID="oculto" runat="server" style="display:none;"></asp:TextBox>
             </div>
         </div>
 
         <!--Tercer panel eliminar trabajador-->
         <!--Tabla de consulta-->
         <div class="col-lg-6 col-md-6" style="margin-left: 20px;">
-        <asp:Label ID="Label1" runat="server" CssClass="encabezado" style="width: 21%;">Consultar Trabajador</asp:Label>
-            <div class="form-group row borde_encabezado" style="margin-top: 10px;" align="center">
-                <div class="col-sm-8">
-                    <table class="table table-striped">
-                    <thead>
-                        <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">NOMBRE</th>
-                        <th scope="col">APELLIDO</th>
-                        <th scope="col">INDENTIFICACIÓN</th>
-                        <th scope="col">TIPO INDENTIFICACIÓN</th>
-                        <th scope="col">SALARIO</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        </tr>
-                    </tbody>
-                    </table>
+                <asp:Label ID="Label1" runat="server" CssClass="encabezado" style="width: 21%;">Consultar Trabajador</asp:Label>
+                <div class="form-group row borde_encabezado" style="margin-top: 10px;" align="center">
+                    <div class="col-sm-8">
+                        <div class="table-wrapper-scroll-y">
+                            <asp:GridView ID="gdvListaTrabajdoresEliminar" runat="server">
+                            </asp:GridView>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
     </div>
 </div>

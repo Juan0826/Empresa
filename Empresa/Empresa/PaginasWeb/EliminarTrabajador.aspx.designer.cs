@@ -42,6 +42,15 @@ namespace Empresa.PaginasWeb
         protected global::System.Web.UI.WebControls.TextBox identificadorbuscar;
 
         /// <summary>
+        /// Control Btn_BuscarEli.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_BuscarEli;
+
+        /// <summary>
         /// Control Btn_CancelarBusq.
         /// </summary>
         /// <remarks>
@@ -96,6 +105,15 @@ namespace Empresa.PaginasWeb
         protected global::System.Web.UI.WebControls.TextBox identificacion;
 
         /// <summary>
+        /// Control btn_Eliminar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Eliminar;
+
+        /// <summary>
         /// Control btn_CancelarEli.
         /// </summary>
         /// <remarks>
@@ -105,6 +123,15 @@ namespace Empresa.PaginasWeb
         protected global::System.Web.UI.WebControls.Button btn_CancelarEli;
 
         /// <summary>
+        /// Control oculto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox oculto;
+
+        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -112,5 +139,14 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
+        /// Control gdvListaTrabajdoresEliminar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gdvListaTrabajdoresEliminar;
     }
 }
