@@ -22,14 +22,15 @@ namespace Empresa.ControladorDatos
                 ObjComando.Connection = ObjConexion;
                 ObjComando.CommandType = CommandType.Text;
                 ObjComando.CommandText = @"INSERT INTO [dbo].[trabajador] ([Nombres],[Apellidos],[Identificacion]
-                    ,[Tipo_Identificador_Id],[Salario]) 
-                    VALUES (@Nombres,@Apellidos,@Identificacion,@Tipo_Identificador_Id,@Salario)";
+                    ,[Tipo_Identificador_Id],[Salario],Calculo) 
+                    VALUES (@Nombres,@Apellidos,@Identificacion,@Tipo_Identificador_Id,@Salario,@Calculo)";
 
                 ObjComando.Parameters.AddWithValue("@Nombres", trabajador.Nombres);
                 ObjComando.Parameters.AddWithValue("@Apellidos",trabajador.Apellidos);
                 ObjComando.Parameters.AddWithValue("@Identificacion", trabajador.Identificacion);
                 ObjComando.Parameters.AddWithValue("@Tipo_Identificador_Id", trabajador.Identificador_Id);
                 ObjComando.Parameters.AddWithValue("@Salario", trabajador.Salario);
+                ObjComando.Parameters.AddWithValue("@Calculo", trabajador.Calculo);
 
                 ObjTransaction = ObjConexion.BeginTransaction(IsolationLevel.RepeatableRead);
                 ObjComando.Transaction = ObjTransaction;
@@ -62,13 +63,13 @@ namespace Empresa.ControladorDatos
                 SqlCommand ObjComando = new SqlCommand();
                 ObjComando.Connection = ObjConexion;
                 ObjComando.CommandType = CommandType.Text;
-                ObjComando.CommandText = @"SELECT [Trabajador_Id],[Nombres],[Apellidos],[Identificacion],[Tipo_Identificador_Id],[Salario] FROM [dbo].[trabajador]";
+                ObjComando.CommandText = @"SELECT [Trabajador_Id],[Nombres],[Apellidos],[Identificacion],[Tipo_Identificador_Id],[Salario],Calculo FROM [dbo].[trabajador]";
 
                 var r = ObjComando.ExecuteReader();
 
                 while (r.Read())
                 {
-                    ListaTrabajador.Add(new Trabajador(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetInt32(3), r.GetInt32(4), r.GetDecimal(5)));
+                    ListaTrabajador.Add(new Trabajador(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetInt32(3), r.GetInt32(4), r.GetDecimal(5), r.GetInt32(6)));
                 }
             }
             return ListaTrabajador;
@@ -89,7 +90,8 @@ namespace Empresa.ControladorDatos
                                                     [Apellidos],
                                                     [Identificacion],
                                                     [Tipo_Identificador_Id],    
-                                                    [Salario] 
+                                                    [Salario],
+                                                    Calculo
                                         FROM [dbo].[trabajador] 
                                         WHERE [Identificacion] = @Identificacion";
 
@@ -99,7 +101,7 @@ namespace Empresa.ControladorDatos
 
                 while (r.Read())
                 {
-                    ListaBuscarTrabajador.Add(new Trabajador(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetInt32(3), r.GetInt32(4), r.GetDecimal(5)));
+                    ListaBuscarTrabajador.Add(new Trabajador(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetInt32(3), r.GetInt32(4), r.GetDecimal(5), r.GetInt32(6)));
                 }
             }
 

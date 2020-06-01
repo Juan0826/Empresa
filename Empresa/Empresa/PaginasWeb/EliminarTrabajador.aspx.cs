@@ -11,8 +11,6 @@ namespace Empresa.PaginasWeb
 {
     public partial class EliminarTrabajador : System.Web.UI.Page
     {
-        int codigoTrabajador;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             LlenarTabla();
@@ -30,13 +28,17 @@ namespace Empresa.PaginasWeb
                 this.nombre_Completo.Text = trabajador.Nombres +" "+ trabajador.Apellidos;
                 this.identificacion.Text = Convert.ToString(trabajador.Identificacion);
             }
-
-            
         }
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
             bool respuesta = AccesoTrabajador.EliminarTrabajador(Convert.ToInt32(oculto.Text));
+
+            if (respuesta)
+            {
+                LlenarTabla();
+                LimpiarCampos();
+            }
         }
 
         protected void LlenarTabla()
@@ -45,6 +47,13 @@ namespace Empresa.PaginasWeb
 
             this.gdvListaTrabajdoresEliminar.DataSource = ListaTrabajador;
             this.gdvListaTrabajdoresEliminar.DataBind();
+        }
+
+        protected void LimpiarCampos()
+        {
+            this.identificacion.Text = "";
+            this.nombre_Completo.Text = "";
+            this.oculto.Text = "";
         }
     }
 }

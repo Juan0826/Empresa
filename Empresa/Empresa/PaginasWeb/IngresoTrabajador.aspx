@@ -11,39 +11,63 @@
                     <div class="col-sm-8">
                         <asp:TextBox ID="nombre" runat="server" class="form-control nombre" type="text" name="nombre" value="" maxlength="10" placeholder="Ingrese Nombre"></asp:TextBox>
                     </div>
+                    <br />
+                    <br />
+                    <br />
                     <asp:Label ID="label2" runat="server" class="col-sm-4 col-form-label">Apellido </asp:Label>
                     <div class="col-sm-8">
                         <asp:TextBox ID="apellido" runat="server" class="form-control" type="text" name="apellido" value="" maxlength="10" placeholder="Ingrese Apellido"></asp:TextBox>
                     </div>
+                    <br />
+                    <br />
+                    <br />
                     <asp:Label ID="label3" runat="server" class="col-sm-4 col-form-label tipoIdentificador">Tipo de indentificación </asp:Label>
                     <div class="col-sm-8">
                         <asp:DropDownList ID="tipoidentificacion" runat="server" CssClass="form-control"></asp:DropDownList>
                     </div>
+                    <br />
+                    <br />
+                    <br />
                     <asp:Label ID="label4" runat="server" class="col-sm-4 col-form-label">Identificación </asp:Label>
                     <div class="col-sm-8">
                         <asp:TextBox ID="identificacion" runat="server" class="form-control" type="number" name="identificacion" value="" maxlength="10" placeholder="Identificación"></asp:TextBox>
                     </div>
+                    <br />
+                    <br />
+                    <br />
                     <asp:Label ID="label5" runat="server" class="col-sm-4 col-form-label">Salario </asp:Label>
                     <div class="col-sm-8">
                         <asp:TextBox ID="salario" runat="server" class="form-control" type="number" name="salario" value="" maxlength="10" placeholder="Ingrese Salario"></asp:TextBox>
                     </div>
+                    <br />
+                    <br />
+                    <br />
                     <div class="col-sm-12" style="margin-top: 10px;">
-                        <button class="btn btn-primary" id="btnSueldo" >Consultar</button> 
+                        <button class="btn btn-success" id="btnSueldo" >Consultar</button> 
                     </div>
-                    <asp:Label ID="label6" runat="server" class="col-sm-4 col-form-label">Total Salario </asp:Label>
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Label ID="label6" runat="server" class="col-sm-4 col-form-label" style="margin-top: 12px;">Total Salario </asp:Label>
                     <div class="col-sm-8">
                         <asp:TextBox ID="total_salario" runat="server" class="form-control" disabled="disabled" type="number" style="margin-top: 10px;" maxlength="10" placeholder="Salario"></asp:TextBox>
                     </div>
-                    <asp:Label ID="label7" runat="server" class="col-sm-4 col-form-label">Nombre Completo</asp:Label>
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Label ID="label7" runat="server" class="col-sm-4 col-form-label" style="margin-top: 20px;">Nombre Completo</asp:Label>
                     <div class="col-sm-8">
                         <asp:TextBox ID="nombre_completo" runat="server" class="form-control" disabled="disabled" type="text" name="nombre_completo" style="margin-top: 18px;" value="" maxlength="10" placeholder="Nombre completo"></asp:TextBox>
                     </div>
-
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <div class="col-sm-6" style="margin-top: 10px;">
                         <asp:Button ID="Btn_Ingresar" runat="server" CssClass="btn btn-ingresar" Text="Ingresar" OnClick="Btn_Ingresar_Click"/>
                     </div>
                     <div class="col-sm-6" style="margin-top: 10px;">
-                        <button class="btn btn-primary" >Cancelar</button>
+                        <button class="btn btn-cancelar" >Cancelar</button>
                     </div>
 
                 </div>                
@@ -54,9 +78,17 @@
             <div class="col-lg-6 col-md-6" style="margin-left: 20px;">
                 <asp:Label ID="Encabezado2" runat="server" CssClass="encabezado" style="width: 21%;">Consultar Trabajador</asp:Label>
                 <div class="form-group row borde_encabezado" style="margin-top: 10px;" align="center">
-                    <div class="col-sm-8">
+                    <div class="col-sm-12">
                         <div class="table-wrapper-scroll-y">
-                            <asp:GridView ID="gdvListaTrabajdores" runat="server">
+                            <asp:GridView ID="gdvListaTrabajdores" runat="server" AutoGenerateColumns="False" Width="100">
+                                <Columns>
+                                    <asp:BoundField HeaderText="ID" DataField="Trabajador_Id" SortExpression="Trabajador_Id"/>
+                                    <asp:BoundField HeaderText="Nombre" DataField="Nombres" SortExpression="Nombres"/>
+                                    <asp:BoundField HeaderText="Apellido" DataField="Trabajador_Id" SortExpression="Trabajador_Id"/>
+                                    <asp:BoundField HeaderText="Identificacion" DataField="Identificacion" SortExpression="Identificacion"/>
+                                    <asp:BoundField HeaderText="Tipo Identificacion" DataField="Identificador_Id" SortExpression="Identificador_Id"/>
+                                    <asp:BoundField HeaderText="Salario" DataField="Salario" SortExpression="Salario"/>
+                                </Columns>
                             </asp:GridView>
                         </div>
                     </div>

@@ -49,16 +49,20 @@ namespace Empresa.PaginasWeb
 
             var salario = Convert.ToInt32(this.salario.Text);
             int TSalario;
+            int Opcion;
 
             if (salario < 870803)
             {
                 TSalario = salario + 102854;
+                Opcion = 1;
             }
             else
             {
                 TSalario = salario;
+                Opcion = 0;
             }
             trabajador.Salario = Convert.ToDecimal(TSalario);
+            trabajador.Calculo = Opcion;
 
             bool Estado = AccesoTrabajador.InsertarTrabajador(trabajador);
 
@@ -66,11 +70,24 @@ namespace Empresa.PaginasWeb
             {
                 //ScriptManager.RegisterClientScriptBlock(this, GetType(),"alertMessage", @"alert('Trabajador registrado correctamente');", true);
                 //ScriptManager.RegisterClientScriptBlock(this, GetType(),"alertMessage", @"alert('Trabajador registrado correctamente');", true);
+                LlenarTabla();
+                LimpiarCampos();
             }
             else
             {
                 //ScriptManager.RegisterClientScriptBlock(this, GetType(), "alertMessage", @"alert('Error al registrar trabajador')", true);
             }
+        }
+
+        protected void LimpiarCampos()
+        {
+            this.nombre.Text = "";
+            this.apellido.Text = "";
+            //this.tipoidentificacion.SelectedValue = "";
+            this.identificacion.Text = "";
+            this.salario.Text = "";
+            this.total_salario.Text = "";
+            this.nombre_completo.Text = "";
         }
     }
 }

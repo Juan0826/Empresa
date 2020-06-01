@@ -13,8 +13,9 @@ namespace Empresa.Clases
         public int Identificacion { get; set; }
         public int Identificador_Id { get; set; }
         public decimal Salario { get; set; }
+        public int Calculo { get; set; }
 
-        public Trabajador(int codigoTrabajador, string nombres, string apellidos, int identificacion, int codigoIdentificacion, decimal salario)
+        public Trabajador(int codigoTrabajador, string nombres, string apellidos, int identificacion, int codigoIdentificacion, decimal salario, int Calculo)
         {
             this.Trabajador_Id = codigoTrabajador;
             this.Nombres = nombres;
@@ -22,6 +23,7 @@ namespace Empresa.Clases
             this.Identificacion = identificacion;
             this.Identificador_Id = codigoIdentificacion;
             this.Salario = salario;
+            this.Calculo = Calculo;
         }
 
         public Trabajador()

@@ -43,21 +43,31 @@ namespace Empresa.PaginasWeb
             Trabajador trabajador = new Trabajador();
             trabajador.Nombres = this.nombre.Text;
             trabajador.Apellidos = this.apellido.Text;
-
+            
             var salario = Convert.ToInt32(this.salario.Text);
             int TSalario;
+            int Opcion;
 
             if (salario < 870803)
             {
                 TSalario = salario + 102854;
+                Opcion = 1;
             }
             else
             {
                 TSalario = salario;
+                Opcion = 0;
             }
             trabajador.Salario = Convert.ToDecimal(TSalario);
+            trabajador.Calculo = Opcion;
 
             bool respuesta = AccesoTrabajador.ActualizarTrabajador(Convert.ToInt32(oculto.Text),trabajador);
+
+            if (respuesta)
+            {
+                LlenarTabla();
+                LimpiarCampos();
+            }
         }
 
         protected void Btn_Buscar_Mod_Click(object sender, EventArgs e)
@@ -78,8 +88,9 @@ namespace Empresa.PaginasWeb
 
                 var salario = Convert.ToInt32(trabajador.Salario);
                 int TSalario;
+                int Opcion = trabajador.Calculo;
 
-                if (salario < 870803)
+                if(Opcion == 1)
                 {
                     TSalario = salario - 102854;
                 }
@@ -90,6 +101,18 @@ namespace Empresa.PaginasWeb
                 this.total_salario.Text = Convert.ToString(Convert.ToInt32(trabajador.Salario));
                 this.salario.Text = Convert.ToString(TSalario);
             }
+        }
+
+        protected void LimpiarCampos()
+        {
+            this.nombre.Text = "";
+            this.apellido.Text = "";
+            //this.tipoidentificacion.SelectedValue = "";
+            this.identificacion.Text = "";
+            this.salario.Text = "";
+            this.total_salario.Text = "";
+            this.nombre_completo.Text = "";
+            this.oculto.Text = "";
         }
     }
 }

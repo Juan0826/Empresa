@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Empresa.PaginasWeb
-{
-
-
-    public partial class EliminarTrabajador
-    {
-
+namespace Empresa.PaginasWeb {
+    
+    
+    public partial class EliminarTrabajador {
+        
         /// <summary>
         /// Control Encabezado1.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Encabezado1;
-
+        
         /// <summary>
         /// Control label_Eli1.
         /// </summary>
@@ -31,7 +29,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label_Eli1;
-
+        
         /// <summary>
         /// Control identificadorbuscar.
         /// </summary>
@@ -40,7 +38,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox identificadorbuscar;
-
+        
         /// <summary>
         /// Control Btn_BuscarEli.
         /// </summary>
@@ -49,7 +47,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Btn_BuscarEli;
-
+        
         /// <summary>
         /// Control Btn_CancelarBusq.
         /// </summary>
@@ -58,7 +56,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Btn_CancelarBusq;
-
+        
         /// <summary>
         /// Control Encabezado2.
         /// </summary>
@@ -67,7 +65,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Encabezado2;
-
+        
         /// <summary>
         /// Control label_Eli2.
         /// </summary>
@@ -76,7 +74,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label_Eli2;
-
+        
         /// <summary>
         /// Control nombre_Completo.
         /// </summary>
@@ -85,7 +83,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nombre_Completo;
-
+        
         /// <summary>
         /// Control label_Eli3.
         /// </summary>
@@ -94,7 +92,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label label_Eli3;
-
+        
         /// <summary>
         /// Control identificacion.
         /// </summary>
@@ -103,7 +101,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox identificacion;
-
+        
         /// <summary>
         /// Control btn_Eliminar.
         /// </summary>
@@ -112,7 +110,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_Eliminar;
-
+        
         /// <summary>
         /// Control btn_CancelarEli.
         /// </summary>
@@ -121,7 +119,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_CancelarEli;
-
+        
         /// <summary>
         /// Control oculto.
         /// </summary>
@@ -130,7 +128,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox oculto;
-
+        
         /// <summary>
         /// Control Label1.
         /// </summary>
@@ -139,7 +137,7 @@ namespace Empresa.PaginasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// Control gdvListaTrabajdoresEliminar.
         /// </summary>
