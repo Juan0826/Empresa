@@ -21,7 +21,7 @@
                 <br />
                 <br />
                 <div class="col-sm-6" align="left" style="margin-top: 10px;">
-                <asp:Button ID="Btn_CancelarBusq" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
+                <asp:Button ID="Btn_CancelarBusq" CssClass="btn btn-cancelar" Text="Cancelar" runat="server" OnClick="Btn_CancelarBusq_Click"/>
                 </div>
             </div>
 
@@ -43,9 +43,8 @@
                 <asp:Button ID="btn_Eliminar" runat="server" CssClass="btn btn-success" OnClick="btn_Eliminar_Click" Text="Eliminar"/>
                 </div>
                 <div class="col-sm-6" style="margin-top: 100px;" align="left">
-                <asp:Button ID="btn_CancelarEli" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
+                <asp:Button ID="btn_CancelarEli" CssClass="btn btn-cancelar" Text="Cancelar" runat="server" OnClick="btn_CancelarEli_Click"/>
                 </div>
-
                 <asp:TextBox ID="oculto" runat="server" style="display:none;"></asp:TextBox>
             </div>
         </div>

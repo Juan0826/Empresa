@@ -113,6 +113,22 @@ namespace Empresa.PaginasWeb
             this.total_salario.Text = "";
             this.nombre_completo.Text = "";
             this.oculto.Text = "";
+            this.identificadorbuscar.Text = "";
+        }
+
+        protected void LimpiarBuscar()
+        {
+            this.identificadorbuscar.Text = "";
+        }
+
+        protected void Btn_CancelarBusq_Click(object sender, EventArgs e)
+        {
+            LimpiarBuscar();
+        }
+
+        protected void Btn_Cancelar_Mod_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

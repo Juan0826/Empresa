@@ -54,6 +54,22 @@ namespace Empresa.PaginasWeb
             this.identificacion.Text = "";
             this.nombre_Completo.Text = "";
             this.oculto.Text = "";
+            this.identificadorbuscar.Text = "";
+        }
+
+        protected void LimpiarBuscar()
+        {
+            this.identificadorbuscar.Text = "";
+        }
+
+        protected void Btn_CancelarBusq_Click(object sender, EventArgs e)
+        {
+            LimpiarBuscar();
+        }
+
+        protected void btn_CancelarEli_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

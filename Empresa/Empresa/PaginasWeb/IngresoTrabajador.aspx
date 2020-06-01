@@ -67,7 +67,7 @@
                         <asp:Button ID="Btn_Ingresar" runat="server" CssClass="btn btn-ingresar" Text="Ingresar" OnClick="Btn_Ingresar_Click"/>
                     </div>
                     <div class="col-sm-6" style="margin-top: 10px;">
-                        <button class="btn btn-cancelar" >Cancelar</button>
+                        <asp:Button ID="Btn_Cancelar" runat="server" CssClass="btn btn-cancelar" Text="Cancelar" OnClick="Btn_Cancelar_Click"/>
                     </div>
 
                 </div>                

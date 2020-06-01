@@ -89,5 +89,10 @@ namespace Empresa.PaginasWeb
             this.total_salario.Text = "";
             this.nombre_completo.Text = "";
         }
+
+        protected void Btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
     }
 }

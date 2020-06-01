@@ -19,7 +19,7 @@
                         <asp:Button ID="Btn_Buscar_Mod" CssClass="btn btn-success" Text="Buscar" runat="server" OnClick="Btn_Buscar_Mod_Click"/>
                     </div>
                     <div class="col-sm-6" align="left" style="margin-top: 10px;">
-                        <asp:Button ID="Btn_CancelarBusq" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
+                        <asp:Button ID="Btn_CancelarBusq" CssClass="btn btn-cancelar" Text="Cancelar" runat="server" OnClick="Btn_CancelarBusq_Click"/>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                     <asp:Button ID="Btn_Mod_Ingresar" runat="server" CssClass="btn btn-ingresar" Text="Ingresar" OnClick="Btn_Mod_Ingresar_Click"/>
                     </div>
                     <div class="col-sm-6" style="margin-top: 10px;">
-                    <asp:Button ID="Button2" CssClass="btn btn-cancelar" Text="Cancelar" runat="server"/>
+                    <asp:Button ID="Btn_Cancelar_Mod" CssClass="btn btn-cancelar" Text="Cancelar" runat="server" OnClick="Btn_Cancelar_Mod_Click"/>
                     </div>
 
                     <asp:TextBox ID="oculto" runat="server" style="display:none;"></asp:TextBox>
