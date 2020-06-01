@@ -142,5 +142,51 @@ namespace Empresa.ControladorDatos
             }
             return Estado;
         }
+
+
+        public static bool ActualizarTrabajador(int CodigoTrabajador,Trabajador trabajador)
+        {
+
+            bool Estado = false;
+
+            using (SqlConnection ObjConexion = new SqlConnection(Conexion.Cadena_Conexion))
+            {
+                ObjConexion.Open();
+                SqlCommand ObjComando = new SqlCommand();
+                SqlTransaction ObjTransaction = null;
+                ObjComando.Connection = ObjConexion;
+                ObjComando.CommandType = CommandType.Text;
+                ObjComando.CommandText = @"UPDATE [dbo].[trabajador]
+                                           SET [Nombres] = @Nombres
+                                              ,[Apellidos] = @Apellidos
+                                              ,[Salario] = @Salario
+                                         WHERE [Trabajador_Id] = @Codigo";
+
+                ObjComando.Parameters.AddWithValue("@Nombres", trabajador.Nombres);
+                ObjComando.Parameters.AddWithValue("@Apellidos", trabajador.Apellidos);
+                ObjComando.Parameters.AddWithValue("@Salario", trabajador.Salario);
+                ObjComando.Parameters.AddWithValue("@Codigo", CodigoTrabajador);
+
+                ObjTransaction = ObjConexion.BeginTransaction(IsolationLevel.RepeatableRead);
+                ObjComando.Transaction = ObjTransaction;
+
+                try
+                {
+                    int r = ObjComando.ExecuteNonQuery();
+                    if (r == 1)
+                    {
+                        ObjTransaction.Commit();
+                        Estado = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+            }
+            return Estado;
+        }
+
+
     }
 }
