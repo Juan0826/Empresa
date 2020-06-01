@@ -63,7 +63,7 @@ namespace Empresa.ControladorDatos
                 SqlCommand ObjComando = new SqlCommand();
                 ObjComando.Connection = ObjConexion;
                 ObjComando.CommandType = CommandType.Text;
-                ObjComando.CommandText = @"SELECT [Trabajador_Id],[Nombres],[Apellidos],[Identificacion],[Tipo_Identificador_Id],[Salario],Calculo FROM [dbo].[trabajador]";
+                ObjComando.CommandText = @"SELECT [Trabajador_Id],[Nombres],[Apellidos],[Identificacion],[Tipo_Identificador_Id],[Salario],[Calculo] FROM [dbo].[trabajador]";
 
                 var r = ObjComando.ExecuteReader();
 
@@ -91,7 +91,7 @@ namespace Empresa.ControladorDatos
                                                     [Identificacion],
                                                     [Tipo_Identificador_Id],    
                                                     [Salario],
-                                                    Calculo
+                                                    [Calculo]
                                         FROM [dbo].[trabajador] 
                                         WHERE [Identificacion] = @Identificacion";
 

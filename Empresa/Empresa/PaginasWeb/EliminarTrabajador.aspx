@@ -60,7 +60,7 @@
                             <Columns>
                                 <asp:BoundField HeaderText="ID" DataField="Trabajador_Id" SortExpression="Trabajador_Id"/>
                                 <asp:BoundField HeaderText="Nombre" DataField="Nombres" SortExpression="Nombres"/>
-                                <asp:BoundField HeaderText="Apellido" DataField="Trabajador_Id" SortExpression="Trabajador_Id"/>
+                                <asp:BoundField HeaderText="Apellido" DataField="Apellidos" SortExpression="Apellidos"/>
                                 <asp:BoundField HeaderText="Identificacion" DataField="Identificacion" SortExpression="Identificacion"/>
                                 <asp:BoundField HeaderText="Tipo Identificacion" DataField="Identificador_Id" SortExpression="Identificador_Id"/>
                                 <asp:BoundField HeaderText="Salario" DataField="Salario" SortExpression="Salario"/>
